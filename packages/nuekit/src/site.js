@@ -41,6 +41,7 @@ export async function createSite(args) {
   }
 
   async function readData(path) {
+    if (!path) return
     try {
       const raw = await read(path)
       return yaml.load(raw)
@@ -76,6 +77,7 @@ export async function createSite(args) {
 
   const dist = joinRootPath(root, site_data.dist || join('.dist', is_prod ? 'prod' : 'dev'))
   const port = args.port || site_data.port || (is_prod ? 8081 : 8080)
+  site_data.base = args.base || site_data.base
 
 
   // flag if .dist is empty
