@@ -15,15 +15,15 @@ CSS is the design language of the internet:
 
 1. **Global by nature** — CSS and design systems are global. Elements like typography, colors, spacing, and base content (headings, paragraphs, etc.) should be managed globally for consistency.
 
-1. **Central control** a centrally managed design system is easy to control by CSS developers / design engineers.
+2. **Central control** a centrally managed design system is easy to control by CSS developers / design engineers.
 
-1. **Modern CSS** Modern CSS is a powerful, standalone language. The cascade, advanced selectors, and motion design are just few examples of it's power.
+3. **Modern CSS** Modern CSS is a powerful, standalone language. The cascade, advanced selectors, and motion design are just few examples of its power.
 
-1. **HMR Speed** — vanilla CSS don't need processing, while JavaScript monoliths with large dependencies can take several seconds to rebuild.
+4. **Hot Module Replacement (HMR) Speed** — vanilla CSS doesn't need processing, while JavaScript monoliths with large dependencies can take several seconds to rebuild.
 
-1. **Smaller footprint** — CSS results in a much lighter page weight. For example, this website's entire CSS footprint is about the same size as Tailwind's Preflight CSS.
+5. **Smaller footprint** — CSS results in a much lighter page weight. For example, this website's entire CSS footprint is about the same size as Tailwind's Preflight CSS.
 
-1. **Timeless skills and products** — The JS monolith and its various unstandardized features are popular right now, but it's hard to predict what will happen in five years. The complicated utility syntaxes and missed opportunities indicate potential technology debt. It's wise to stick with web standards, as this benefits your skills and career. Plus, the products you create will be more durable over time.
+6. **Timeless skills and products** — The JS monolith and its various unstandardized features are popular right now, but it's hard to predict what will happen in five years. The complicated utility syntaxes and missed opportunities indicate potential technology debt. It's wise to stick with web standards, as this benefits your skills and career. Plus, the products you create will be more durable over time.
 
 
 ## Design systems
@@ -71,7 +71,6 @@ UI libraries are defined in your `site.yaml` configuration file like this:
 libs: ["@library"]
 ```
 Unlike global styles, these styles are included on demand. Typical **library files** might include `card.css` or `form.css`.
-
 
 
 [image]
@@ -214,8 +213,6 @@ By consolidating section styles, your CSS remains clean and modular, ensuring co
 
 ## Writing good, modern CSS
 
-
-
 ### Start with the content
 
 Always begin by planning your information architecture and drafting your content. Your design and branding will naturally evolve from there. The better you understand your content, the more precisely you can structure your design system and CSS.
@@ -262,7 +259,6 @@ When styling your components, it’s crucial to separate concerns by keeping sty
 For example, avoid this:
 
 
-
 ```html.bad "**BAD**: style embedded directly in the markup"
 <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
   <div class="shrink-0">
@@ -278,7 +274,6 @@ For example, avoid this:
 Instead, decouple your styles from the markup by using reusable components in your design system:
 
 
-
 ```html.good "**GOOD**: External styling (styles are separated from the markup)"
 <div class="notification card">
   <h3>ChitChat</h3>
@@ -289,7 +284,6 @@ Instead, decouple your styles from the markup by using reusable components in yo
 In this approach, the **notification** and **card** classes are part of the design system, allowing the component to be styled consistently across your site while remaining flexible. This method makes your code easier to maintain and adapt while ensuring that all design changes flow from the central **design system**, not from individual components.
 
 Decoupling styles from markup keeps your design flexible, maintainable, and scalable. It allows for different styling depending on the context, without changing the underlying HTML.
-
 
 
 ### Create reusable components
@@ -326,7 +320,6 @@ In this case, we have two components: **card** (a reusable UI element) and **not
 ```
 
 This separation of concerns not only reduces redundancy but also allows for easier updates. The **card** class can be reused across multiple components and pages, while the **notification** class applies only to the specific use case, making it easy to isolate and update.
-
 
 
 ### Use CSS nesting
@@ -416,4 +409,4 @@ Limiting options reduces the potential for errors and ensures the design remains
 
 ## Templates
 
-For many engineers, design can feel like a foreign concept — something abstract and difficult to master. The same often goes for CSS, which many find confusing or tricky to get right. Some even avoid it entirely. Nue’s **Templates** aim to bridge that gap. [Join the mailing](/index.html#roadmap) list to get notified when they are released.
+For many engineers, design can feel like a foreign concept — something abstract and difficult to master. The same often goes for CSS, which many find confusing or tricky to get right. Some even avoid it entirely. Nue's **templates** aim to bridge that gap. [Join the mailing](/index.html#roadmap) list to get notified when they are released.

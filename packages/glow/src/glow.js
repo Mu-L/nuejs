@@ -7,7 +7,7 @@ const NL = '\n'
 
 const COMMON_WORDS = 'null|true|false|undefined|import|from|async|await|package|begin\
 |interface|class|new|int|func|function|get|set|export|default|const|var|let\
-|return|for|while|defer|if|then|else|elif|fi|int|string|number|def|public|static|void\
+|return|yield|for|while|defer|if|then|else|elif|fi|int|string|number|def|public|static|void\
 |continue|break|switch|case|final|finally|try|catch|while|super|long|float\
 |throw|fun|val|use|fn|my|end|local|until|next|bool|ns|defn|puts|require|each'
 
@@ -213,8 +213,8 @@ export function renderRow(row, lang, mark=true) {
   ret.push(row.substring(index))
   const res = ret.join('')
 
-  return !mark ? res : res.replace(MARK, (_, a, b, c) => {
-    return elem(a[1] ? 'u' : 'mark', b)
+  return !mark ? res : res.replace(MARK, (_, marker, content) => {
+    return elem(marker[1] ? 'u' : 'mark', content)
   })
 }
 
@@ -247,7 +247,7 @@ export function parseSyntax(lines, lang, prefix = true) {
         if (wrap) line = (line[1] == ' ' ? ' ' : '') + line.slice(1)
 
         // escape character
-        if (!prefix && c == '\\') line = line.slice(1)
+        if (prefix && c == '\\') line = line.slice(1)
 
         html.push({ line, wrap })
       }

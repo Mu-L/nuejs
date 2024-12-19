@@ -45,8 +45,6 @@ When drafting your [design system](ux-development.html#design-system) limit your
 - [LogRocket: Design constraints: Why they’re actually useful](//blog.logrocket.com/ux-design/design-constraints-why-theyre-useful/)
 
 
-
-
 ## Organize your CSS { #organize }
 Your CSS code is applied to a standardized [HTML layout](page-layout.html) in the global design system. This CSS should be organized in such a way that the colors, elements and components are aligned with your design system.
 
@@ -64,11 +62,9 @@ Name the files in such a way that everyone can easily guess what's inside the fi
 - `form.css` with all form elements like inputs, text areas, select boxes, checkboxes, radios, sliders, etc.
 
 
-
 #### Links
 - [O'Reilly: Classifying Different Types of Styles](//www.oreilly.com/library/view/css-refactoring/9781491978528/ch04.html)
 - [Sparkbox: The Anatomy of a Design System](//sparkbox.com/foundry/design_system_makeup_design_system_layers_parts_of_a_design_system)
-
 
 
 ## Setup CSS cascade { #css-hierarchy }
@@ -91,10 +87,6 @@ Place all page-specific CSS under the leaf folder, where the `index.md` file res
 
 #### More info:
 - [MDN: Cascade, specificity, and inheritance](//developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-
-
-
-
 
 
 ## Use simple selectors { #selectors }
@@ -131,7 +123,6 @@ Simple selectors make your CSS easy to read and maintain. They keep your file si
 [Specificity and Hierarchy in CSS](//kelvinofili.hashnode.dev/specificity-and-hierarchy-in-css)
 
 
-
 ## Write clean HTML { #clean-markup }
 Avoid using unnecessary divs, spans and class names in your [custom layouts](custom-layouts.html):
 
@@ -157,7 +148,6 @@ Instead, you should write clean and semantic HTML:
 ```
 
 Clean HTML is significantly easier to read and work with. Use a class name only on the root element and let CSS selectors do the rest. It's surprising how little class names you need with clean, semantic markup. This website, for example, has only four class names on the global scope: "grid", "card", "stack" and "note". "Global namespace pollution" is essentially a myth and is trivial to avoid.
-
 
 
 ## Create re-usable class names { #reuse }
@@ -198,12 +188,6 @@ Now the "card" class can be applied to any element or component you desire, redu
 [Nicolas Gallagher: Component Modifiers](//nicolasgallagher.com/about-html-semantics-front-end-architecture/#component-modifiers)
 
 
-
-
-
-
-
-
 #### Links
 [MDN: External Stylesheets](//developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured#external_stylesheet)
 
@@ -228,7 +212,6 @@ Don't create a custom component for every possible situation where a standard HT
 Standard HTML helps you avoid *component overload* — a situation where you are constantly creating new components. It's not unusual to see massive codebases with hundreds, even thousands of components. Don't do that. Use semantic HTML and keep your codebase clean and lean.
 
 
-
 ## Avoid CSS reset libraries
 Avoid CSS reset libraries. They just add extra complexity and baggage with very little value. First, you set everything to zero and then reset it to something you desire. It's better to only implement what's included in your design system and that's all you need. The only CSS reset you need is this:
 
@@ -241,18 +224,14 @@ Avoid CSS reset libraries. They just add extra complexity and baggage with very 
 This sets your [CSS box model](//developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) globally to "border-box", which makes dealing with the sizes much easier and eliminates several issues while laying out your content.
 
 
-
 ## Avoid CSS frameworks
 Avoid CSS frameworks. They just add extra layers of complexity and very little value. Once you've created your design system, and know exactly what you're doing, the CSS comes naturally. Any 3rd party library is just on your way by adding tons of things you don't need. For example, Bootstrap 4 has around 9000 lines of CSS, which is orders of magnitude more than what is needed for this website. Minimalism might be the most undervalued development skill.
-
-
 
 
 ## Avoid CSS-in-JS
 CSS-in-JS was introduced in 2014 to solve the problem of a global namespace in Facebook's gigantic, PHP-based codebase. However, this is a non-issue in well-organized CSS architectures.
 
 A much better solution is to respect constraints and centralize your CSS for developers who care about UX. Having 5-15 carefully named components does not pollute anything. Instead, you'll create a library of reusable components that match your design system.
-
 
 
 ## Prefer CSS over JavaScript
@@ -269,7 +248,7 @@ Check [motion and reactivity](reactivity.html) for details.
 ## Learn modern CSS
 There is tons of [misinformation](/blog/tailwind-misinformation-engine/) about CSS that makes beginner developers move away from web standards and adopt the idea of inline styling.
 
-But if you grasp the power of the global design system and see how you can accomplish the same thing with significantly less effort, you begin to think why you ever bought the idea of tight coupling in the first place.
+But if you grasp the power of the global design system and see how you can accomplish the same thing with significantly less effort, you begin to think, why you ever bought the idea of tight coupling in the first place.
 
 Understand the power of constraints, design systems, and web standards. Become a professional UX developer and stay relevant for years to come.
 

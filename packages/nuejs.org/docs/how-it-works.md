@@ -1,4 +1,3 @@
-
 ---
 include: [compare]
 ---
@@ -43,7 +42,6 @@ Nue generates clean, semantic HTML optimized for accessibility and SEO. Its Mark
   size: 648 × 512
 
 
-
 ## Interactive islands
 **Islands architecture** promotes small, focused units of interactivity within server-rendered web pages, further distancing you from tightly coupled architectures. Nue allows you to choose the best-fit technology for each interactive element: an interactive island, an isomorphic island, or a vanilla web component.
 
@@ -53,7 +51,6 @@ Nue generates clean, semantic HTML optimized for accessibility and SEO. Its Mark
   large: /img/island-files-big.png
   small: /img/island-files.png
   size: 745 × 380
-
 
 
 ## Styling
@@ -68,7 +65,6 @@ Nue separates styling from your JavaScript files, allowing you to leverage the f
 [.note]
   ### Note
   In addition to its clean, designer-friendly syntax, a major benefit of vanilla CSS is that, as a web standard, it helps you create timeless products and build skills that remain relevant in the ever-changing world of web development.
-
 
 
 ## Motion
@@ -105,9 +101,8 @@ Progressive enhancement opens new opportunities for performance improvement:
   width: 650
 
 
-
 ## Design engineering
-With Nue, you shift from **JavaScript engineering** to **Design Engineering**,  changing the way you build websites:
+With Nue, you shift from **JavaScript engineering** to **Design Engineering**, changing the way you build websites:
 
 [image.bordered]
   caption: "[button.above popovertarget=compare label='See the difference']"
@@ -159,4 +154,3 @@ Key terms mentioned in this article:
   ### Isomorphic Components
   Components that can be rendered both on the server and the client, combining the best of server-side performance and client-side interactivity.
   [Wikipedia](//en.wikipedia.org/wiki/Isomorphic_JavaScript)
-

@@ -32,7 +32,7 @@ Building websites:
   - Content: content.html
 ```
 
-YAML excels at handling complex structures, such as **nested arrays**, which is ideal for organizing complex datasets in Nue. Unlike alternatives like **TOML**, YAML’s expressive syntax makes it easier to represent hierarchical data. Additionally, YAML has resolved it's infamous issues, such as the **"Norway problem"**.
+YAML excels at handling complex structures, such as **nested arrays**, which is ideal for organizing complex datasets in Nue. Unlike alternatives like **TOML**, YAML’s expressive syntax makes it easier to represent hierarchical data. Additionally, YAML has resolved its infamous issues, such as the **"Norway problem"**.
 
 
 ## Information architecture { #ia }
@@ -123,8 +123,6 @@ As you move from the site level to the page level, the data gets extended or ove
   caption: Data inheritance in Nue
 
 
-
-
 ## Unstructured content
 
 Unstructured content in Nue varies in terms of its **richness and interactivity**:
@@ -143,7 +141,6 @@ Nue supports an [extended Markdown syntax](content-syntax.html) that handles all
   small: /img/content-files.png
   large: /img/content-files-big.png
   size: 745 × 383
-
 
 
 ### Cloud storage

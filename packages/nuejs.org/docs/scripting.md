@@ -4,10 +4,9 @@ Not all interactivity happens in isolated "islands." Vanilla JavaScript offers s
 
 1. **Dynamic HTML**: JavaScript can grab the static HTML and make it interactive. This approach is at the heart of progressive enhancement, adding dynamic behavior to otherwise static content.
 
-1. **Global scripts**: Unlike islands, global scripts can control the entire site, working across pages and sections. This makes them ideal for seamless, site-wide functionality.
+2. **Global scripts**: Unlike islands, global scripts can control the entire site, working across pages and sections. This makes them ideal for seamless, site-wide functionality.
 
-1. **Non-UI functionality**: JavaScript has access to APIs for features beyond the visible interface, such as tracking user behavior or managing local storage through `localStorage`, `sessionStorage`, or `IndexedDB`.
-
+3. **Non-UI functionality**: JavaScript has access to APIs for features beyond the visible interface, such as tracking user behavior or managing local storage through `localStorage`, `sessionStorage`, or `IndexedDB`.
 
 
 ## Modern JavaScript
@@ -33,7 +32,6 @@ By focusing on JavaScript and web standards, you’ll gain a deeper understandin
 The **Nue.js** template engine is a great example of this. It’s like React, but optimized for the semantic web, and packaged into just 2.5kb of vanilla JavaScript by working directly with the DOM and web standards.
 
 Learning ES6 modules, modern APIs, and DOM manipulation will provide you with long-lasting, powerful skills.
-
 
 
 ## Scripting example
@@ -86,7 +84,6 @@ addEventListener('click', event => {
 2. **Static HTML enrichment**: By adding JavaScript, we make static HTML more interactive without relying on client-side rendering (CSR) or complex JavaScript islands.
 
 3. **Global scripting**: A single click handler efficiently manages all clickable elements across the site, making the JavaScript reusable and efficient.
-
 
 
 ## Scripting with view transitions
@@ -169,7 +166,6 @@ loadPage('thanks.html')
 ```
 
 
-
 ## Hot-reloading
 
 When the page content updates through Hot Module Replacement (HMR), you can re-attach your selectors or run other tasks:
@@ -181,7 +177,6 @@ addEventListener('reload', function() {
 ```
 
 Listening to the `reload` event is necessary if your script relies on DOM elements that might be replaced during HMR. In contrast, scripts using global event handlers (like our earlier example) are unaffected by HMR since they stay active.
-
 
 
 ## Importing modules
@@ -212,7 +207,6 @@ This signals that all the imports in files named `index` will be bundled.
 [.note]
   ### On performance
   Note that bundling has no impact on performance in Nue, as scripts are optional and loaded after HTML and CSS. For performance tips, see the [optimization](optimization.html) section.
-
 
 
 ## TypeScript
